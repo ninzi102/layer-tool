@@ -29,7 +29,11 @@ const ResultTable: React.FC<ResultTableProps> = ({ rows }) => {
       </thead>
       <tbody>
         {rows.map((row, idx) => {
-          const isCmd = row.layerName.includes('全部消して') || row.layerName.includes('場面切り替え') || row.layerName.includes('画面表示');
+          const isCmd = 
+            row.layerName.includes('全部消して') || 
+            row.layerName.includes('場面切り替え') || 
+            row.layerName.includes('画面表示') ||
+            row.layerName.includes('ナレーション');
           const isWarning = row.layerName === '';
           
           return (

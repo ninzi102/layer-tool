@@ -87,6 +87,7 @@ const App: React.FC = () => {
       const isClearTrigger = 
         isSceneReset ||
         charInput.includes('全部消して') ||
+        charInput.includes('ナレーション') || // ナレーション登場時に段数をリセット
         commandInput.includes('全部消して') ||
         commandInput.includes('画面上のセリフを全て消して');
 
